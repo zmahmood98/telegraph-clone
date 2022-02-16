@@ -28,11 +28,11 @@ class Post {
         return new Promise (async (resolve, reject) => {
             try {
                 const db = await init();
-                let dogData = await db.collection('dogs').find({ _id: ObjectId(id) }).toArray()
-                let dog = new Dog({...dogData[0], id: dogData[0]._id});
-                resolve (dog);
+                let postData = await db.collection('posts').find({ _id: ObjectId(id) }).toArray()
+                let post = new Post({...postData[0], id: postData[0]._id});
+                resolve (post);
             } catch (err) {
-                reject('Dog not found');
+                reject('Post not found');
             }
         });
     }
