@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css">
     <script defer src="static/js/app.js"></script>
+    <script defer src="static/js/layout.js"></script>
     <link rel="shortcut icon" href="static/images/secretSteve.png">
     <title>RUMBL</title>
 </head>
@@ -21,13 +22,13 @@
                 <label for="titleTextArea" id="titleLabel" style="display: none" required>Hello</label>
                 <input type="text" id="titleTextArea" placeholder="Title" onclick="this.placeholder=''"  onblur="this.placeholder='Title'"/>
             </div>
-            <div>
-                <label for="Your-name"></label>
-                <input type="text" id="Your-name" placeholder="Your name"  onclick="this.placeholder=''"  onblur="this.placeholder='Your name'"/>
+            <div id="yourNameArea">
+                <label for="yourNameTextArea" id="yourNameLabel" style="display: none" ></label>
+                <input type="text" id="yourNameTextArea" placeholder="Your name"  onclick="this.placeholder=''"  onblur="this.placeholder='Your name'"/>
             </div>
-            <div>
-                <label for="Your-story" required></label>
-                <input type="text" id="Your-story" placeholder="Your story..." onclick="this.placeholder=''"  onblur="this.placeholder='Your story...'"/>
+            <div id="yourStoryArea">
+                <label for="yourStoryTextArea" id="yourStoryLabel" style="display: none"  required></label>
+                <input type="text" id="yourStoryTextArea" placeholder="Your story..." onclick="this.placeholder=''"  onblur="this.placeholder='Your story...'"/>
             </div>
 
             <input type="submit" value="PUBLISH" id="publish">
