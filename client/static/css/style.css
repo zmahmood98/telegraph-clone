@@ -13,6 +13,11 @@ input {
     color: green;
 }
 
+
+::placeholder { 
+    color: #dedede
+  }
+
 #Title {
     font-size: 40px;
     color: green;
