@@ -1,7 +1,3 @@
-
-
-
-
 const form = document.querySelector('.telegraph');
 form.addEventListener('submit', submitPost);
 
@@ -46,19 +42,35 @@ function appendPosts(data) {
 
 function appendPost(postData) {
     const postList = document.getElementById('postList')
+    postList.classList = 'postList'
     
-    const titleDiv = document.createElement('titleDiv');
-    const nameDiv = document.createElement('nameDiv');
-    const dateDiv = document.createElement('dateDiv');
-    const entryDiv = document.createElement('entryDiv');
+    const postDiv = document.createElement('div');
+    postDiv.classList = 'postDiv'
+
+    const titleDiv = document.createElement('a');
+    titleDiv.classList = 'titleDiv'
+    titleDiv.href = "#"
+
+    const nameDiv = document.createElement('div');
+    nameDiv.classList = 'nameDiv'
+
+    const dateDiv = document.createElement('div');
+    dateDiv.classList = 'dateDiv'
+
+    const entryDiv = document.createElement('div');
+    entryDiv.classList = 'entryDiv'
 
     
     titleDiv.textContent = postData.title
     nameDiv.textContent = postData.name
     dateDiv.textContent = postData.date
     entryDiv.textContent = postData.entry
-    postList.append(titleDiv);
-    postList.append(nameDiv);
-    postList.append(dateDiv);
-    postList.append(entryDiv);
+    postDiv.append(titleDiv);
+    postDiv.append(nameDiv);
+    postDiv.append(dateDiv);
+    postDiv.append(entryDiv);
+
+    postList.append(postDiv)
+
+
 };
