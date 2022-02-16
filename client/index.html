@@ -17,9 +17,9 @@
 
     <main>
         <form class="telegraph">
-            <div>
-                <label for="Title" required></label>
-                <input type="text" id="Title" placeholder="Title" onclick="this.placeholder=''"  onblur="this.placeholder='Title'"/>
+            <div id="titleArea">
+                <label for="titleTextArea" id="titleLabel" style="display: none" required>Hello</label>
+                <input type="text" id="titleTextArea" placeholder="Title" onclick="this.placeholder=''"  onblur="this.placeholder='Title'"/>
             </div>
             <div>
                 <label for="Your-name"></label>
@@ -32,6 +32,8 @@
 
             <input type="submit" value="PUBLISH" id="publish">
         </form>
+
+        <section id="postList"></section>
     </main>
 </body>
 </html>
