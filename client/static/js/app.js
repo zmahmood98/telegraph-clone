@@ -1,4 +1,3 @@
-
 const form = document.querySelector('.telegraph');
 const publishBtn = document.querySelector('#publish')
 form.addEventListener('submit', submitPost);
@@ -100,14 +99,14 @@ async function getPost(id) {
 }
 
 // create
-async function submitPost(e) {
+function submitPost(e) {
     e.preventDefault();
     
     let postData = {
-        title: e.target.title.value,
-        name: e.target.name.value,
-        date: e.target.name.value,
-        entry: e.target.name.value
+        title: e.target.titleTextArea.value,
+        name: e.target.yourNameTextArea.value,
+        //date: "17/02/2022",
+        entry: e.target.yourStoryTextArea.value
     };
 
     try {
@@ -118,10 +117,11 @@ async function submitPost(e) {
             headers: { "Content-Type": "application/json" }
         };
 
-        const response = await fetch('http://localhost:3000/', options)
-        const data = await response.json()
-        window.location.hash = `#${data}`
-        e.target.reset()
+        fetch('http://localhost:3000/posts', options)
+        .then(r => r.json())
+        .then(appendPost)
+        .then(() => e.target.reset())
+        .catch(console.warn)
 
     } catch(err) {
         console.warn(err)
@@ -148,8 +148,8 @@ function appendPost(postData) {
     const nameDiv = document.createElement('div');
     nameDiv.classList = 'nameDiv'
 
-    const dateDiv = document.createElement('div');
-    dateDiv.classList = 'dateDiv'
+    //const dateDiv = document.createElement('div');
+    //dateDiv.classList = 'dateDiv'
 
     const entryDiv = document.createElement('div');
     entryDiv.classList = 'entryDiv'
@@ -157,11 +157,11 @@ function appendPost(postData) {
     
     titleDiv.textContent = postData.title
     nameDiv.textContent = postData.name
-    dateDiv.textContent = postData.date
+    //dateDiv.textContent = postData.date
     entryDiv.textContent = postData.entry
     postDiv.append(titleDiv);
     postDiv.append(nameDiv);
-    postDiv.append(dateDiv);
+    //postDiv.append(dateDiv);
     postDiv.append(entryDiv);
 
     postList.append(postDiv)
