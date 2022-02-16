@@ -1,9 +1,11 @@
+
 const titleTextArea = document.getElementById('titleTextArea')
 
 titleTextArea.addEventListener('click', () => {
-    console.log('hi')
     document.getElementById('titleLabel').style.display = 'inline'
 })
+
+
 
 
 const form = document.querySelector('.telegraph');
