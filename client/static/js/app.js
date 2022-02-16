@@ -1,7 +1,3 @@
-
-
-
-
 const form = document.querySelector('.telegraph');
 form.addEventListener('submit', submitPost);
 
