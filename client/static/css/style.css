@@ -1,0 +1,32 @@
+body {
+    background-color:white;
+    font: monospace;
+    padding-left: 50px;
+    
+}
+
+input {
+    border: none;
+    margin: 5px;
+    /* border-radius: 10px; */
+    padding: 5px 0px 5px 0px ;
+    color: green;
+}
+
+#Title {
+    font-size: 40px;
+    color: green;
+}
+
+#Your-name {
+    font-size: 10px;
+}
+
+#Your-story {
+    font-size: 20px;
+}
+
+.telegraph::placeholder {
+    text-align: center;
+    color: rgb(180, 180, 180);
+  }
