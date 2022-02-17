@@ -1,4 +1,4 @@
-# Welcome to the Telegraph!
+# Welcome to RUMBL!
 
 Create your own anonymous post and share it with the world!
 
@@ -8,7 +8,6 @@ Create your own anonymous post and share it with the world!
 
 - Clone or fork the repo
 - Navigate to the telegraph-clone folder at the command line
-- Run `npm install` to install dependencies
 
 ### Usage
 
@@ -36,3 +35,4 @@ Create your own anonymous post and share it with the world!
 ### Challenges
 
 * 
+
